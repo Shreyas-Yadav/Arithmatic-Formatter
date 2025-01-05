@@ -51,15 +51,10 @@ def generate_parts(problems):
 
             
 
-        parts[0] = ' '*(maxLen-len(parts[0].strip())) + parts[0].strip()
-        parts[1] = operator+' '*(maxLen-1-len(parts[1].strip())) + parts[1].strip()
-        parts.append('-'*maxLen)
-        parts.append(' '*(maxLen-len(ans))+ans)
-
-        f_line.append(parts[0])
-        s_line.append(parts[1])
-        t_line.append(parts[2])
-        l_line.append(parts[3])
+        f_line.append(' '*(maxLen-len(parts[0].strip())) + parts[0].strip())
+        s_line.append(operator+' '*(maxLen-1-len(parts[1].strip())) + parts[1].strip())
+        t_line.append('-'*maxLen)
+        l_line.append(' '*(maxLen-len(ans))+ans)
         
     return [f_line,s_line,t_line,l_line]
 
@@ -81,6 +76,6 @@ def display_list(my_list):
 
 
 
-problems = ["98 + 3g5", "3801 - 2", "45 + 43", "123 + 49"]
-print(arithmetic_arranger(problems))
+problems = ["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]
+arithmetic_arranger(problems,True)
 # print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])}')
